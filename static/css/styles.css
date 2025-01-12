@@ -1,0 +1,105 @@
+/* Genel Sayfa Stili */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Sayfa arka plan rengini açık gri yapıyoruz */
+    color: #333; /* Yazı rengini koyu gri yapıyoruz */
+    margin: 0;
+    padding: 0;
+}
+
+/* Ana container (bütün içerik) */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Başlık ve Banner */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #007bff; /* Mavi renk */
+}
+
+/* Blog Postlarını Stilize Etme */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Blog Postu */
+.blog-post {
+    background-color: #fff; /* Beyaz zemin */
+    padding: 20px;
+    border-radius: 10px; /* Köşe yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    transition: transform 0.3s ease; /* Hover efekti */
+}
+
+/* Hover efekti */
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+/* Başlık */
+.blog-post h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* İçerik */
+.blog-post p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Resim */
+.post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Buton */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* Banner Stili */
+.banner {
+    background-color: #007bff; /* Mavi arka plan rengi */
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
