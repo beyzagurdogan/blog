@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>New Information Every Day</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
 </head>
 <body>
     <!-- Banner Ekleyelim -->
     <div class="banner">
-        <h2>Welcome to My Blog!</h2>
+        <h2>Every Day!</h2>
         <p>Sharing my thoughts, ideas, and experiences.</p>
     </div>
 
-    <div class="container">
-        <h1>Blog Posts</h1>
-        <div class="blog-posts">
-            {% for post in posts %}
-                <div class="blog-post">
-                    <h2>{{ post.title }}</h2>
-                    <p>{{ post.content|truncatewords:30 }}</p>
-                    <small>Published on: {{ post.created_at }}</small>
-                    {% if post.image %}
-                        <div class="post-image">
-                            <img src="{{ post.image.url }}" alt="{{ post.title }}">
-                        </div>
-                    {% endif %}
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            {% endfor %}
+<div class="container">
+    <h1>Blog Posts</h1>
+    <div class="blog-posts">
+        {% for post in posts %}
+        <div class="blog-post">
+            {% if post.image %}
+            <div class="post-image">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}">
+            </div>
+            {% endif %}
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content|truncatewords:30 }}</p>
+            <small>Published on: {{ post.created_at }}</small>
+            <a href="{% url 'blog_detail' blog_id=post.id %}" class="btn btn-primary read-more-btn">Read More</a>
         </div>
+        {% endfor %}
     </div>
+</div>
 
-    <footer>
-        <p>© 2025 My Blog | All Rights Reserved</p>
-    </footer>
 
-    <script src="{% static 'js/scripts.js' %}"></script>
+</div>
+
+
+<footer>
+    <p>© 2025 My Blog | All Rights Reserved</p>
+</footer>
+
+<script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
