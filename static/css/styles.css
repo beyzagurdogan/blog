@@ -28,52 +28,75 @@ h1 {
     margin-top: 30px;
 }
 
-/* Blog Postu */
+/* Blog Postları */
 .blog-post {
-    background-color: #fff; /* Beyaz zemin */
+    background-color: #fff; /* Beyaz arka plan */
     padding: 20px;
     border-radius: 10px; /* Köşe yuvarlama */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
     transition: transform 0.3s ease; /* Hover efekti */
+    display: flex;
+    flex-direction: column; /* Üst üste yerleştir */
+    align-items: center; /* Ortala */
+    gap: 10px; /* Elemanlar arası boşluk */
 }
 
-/* Hover efekti */
-.blog-post:hover {
-    transform: translateY(-10px);
+/* Görsel */
+.post-image img {
+    width: 100%; /* Tam genişlik */
+    height: auto; /* Oranını koru */
+    border-radius: 10px;
 }
 
 /* Başlık */
 .blog-post h2 {
     font-size: 1.8em;
     color: #333;
+    text-align: center; /* Ortala */
 }
 
 /* İçerik */
 .blog-post p {
     font-size: 1em;
     color: #555;
+    text-align: justify; /* Metni iki yana yasla */
 }
 
-/* Resim */
-.post-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
 /* Buton */
+/* Buton Genel Stili */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
     color: #fff;
-    text-decoration: none;
+    background-color: #007bff;
+    border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Hover sırasında koyu mavi */
+    transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+.btn-primary {
+    background-color: #28a745; /* Örneğin yeşil bir buton */
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Daha koyu yeşil */
+}
+
+/* "Read More" Butonu Özelleştirme (isteğe bağlı) */
+.read-more-btn {
+    margin-top: 10px;
+    display: inline-block;
 }
 
 /* Footer */
@@ -102,4 +125,67 @@ footer {
 .banner p {
     font-size: 1.2em;
     margin-top: 10px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-image img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Görsel ve Kart Stili */
+.blog-card img {
+    width: 100%; /* Görseller kartın genişliğine göre ayarlanır */
+    height: auto; /* Oran koruma */
+    border-radius: 8px; /* Hafif yuvarlak köşeler */
+    transition: transform 0.3s ease;
+}
+
+.blog-card img:hover {
+    transform: scale(1.03); /* Hover sırasında görsel büyüme */
+}
+
+/* Blog Kartı Genel Stil */
+.blog-card {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 400px; /* Kart genişliği */
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover sırasında daha büyük gölge */
+}
+
+.blog-card h2 {
+    font-size: 18px; /* Daha küçük başlık */
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 14px; /* Daha küçük yazı boyutu */
+    color: #666; /* Daha yumuşak bir metin rengi */
+    margin-bottom: 15px;
 }

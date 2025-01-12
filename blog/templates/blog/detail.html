@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto;">
+    {% endif %}
+    <p>{{ post.content }}</p>
+    <small>Published on: {{ post.created_at }}</small>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
