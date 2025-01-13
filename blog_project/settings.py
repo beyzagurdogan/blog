@@ -77,10 +77,16 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blog_project',  # Veritabanı adı
+        'USER': 'root',          # MySQL kullanıcı adı
+        'PASSWORD': '',  # MySQL şifresi
+        'HOST': 'localhost',     # MySQL sunucu adresi
+        'PORT': '3306',          # MySQL portu
     }
 }
+
+
 
 
 # Password validation
