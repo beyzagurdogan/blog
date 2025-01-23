@@ -11,13 +11,13 @@
     <div class="container my-5">
         <div class="card mx-auto shadow" style="max-width: 800px; border-radius: 8px;">
             <div class="card-body">
-                <h1 class="card-title text-center text-primary mb-4">{{ post.title }}</h1>
+                <h1 class="card-title text-center text-dark mb-4">{{ post.title }}</h1>
                 {% if post.image %}
                     <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid rounded mb-4">
                 {% endif %}
-                <p class="card-text">{{ post.content }}</p>
+                <p class="card-text">{{ post.content|safe }}</p>
                 <small class="text-muted d-block mt-3">Published on: {{ post.created_at }}</small>
-                <a href="/" class="btn btn-primary mt-4">Back to Home</a>
+                <a href="/" class="btn btn-outline-dark mt-4">Back to Home</a>
             </div>
         </div>
     </div>
